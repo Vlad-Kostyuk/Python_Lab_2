@@ -9,6 +9,9 @@ class FishingManager:
     def sort_fishing_list_by_name(self, reverse):
         return sorted(self.fishing_list, key=lambda fishing: fishing.name, reverse=reverse)
 
+    def sort_fishing_list_by_season(self, reverse):
+        return sorted(self.fishing_list, key=lambda fishing: fishing.season.value, reverse=reverse)
+
     def search_by_price(self, price):
         return list(filter(lambda fishing: fishing.price == price, self.fishing_list))
 
