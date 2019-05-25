@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import Enum, auto
 
 
 class Producer(Enum):
-    USA = "USA"
-    EUROPE = "EUROPE"
-    ASIA = "ASIA"
+    USA = auto()
+    EUROPE = auto()
+    ASIA = auto()

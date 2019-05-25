@@ -4,19 +4,15 @@ from model.Season import Season
 from model.FishingSetType import FishingSetType
 
 class FishingNet(FishingShop):
-    def __init__(self, price, name, masa, material, producer=Producer.ASIA, guarantee=12,
-		 color="white", season = Season.ALL_SEASON, fishingSetType = FishingSetType.FISHINGNET, width = 0,
-                 legth = 0, form = "овал"):
-        super().__init__(price,  name,  masa, material,  producer,  guarantee)
+    def __init__(self, price=0, name="name", material="material", producer=Producer.EUROPE, guarantee=0,
+                 color="color", season=Season.ALL_SEASON, fishing_set_type=FishingSetType.FISHINGNET, width=0,
+                 legth=0, form="овал"):
+        super().__init__(price, name, material, producer, guarantee, color, season, fishing_set_type)
         self.width = width
         self.legth = legth
         self.form = form
 
     def __str__(self):
-        return "price = " + self.price + ", name = " + self.name + ", masa = " + self.masa + ", material = " + self.material +\
-              ", producer = " + self.producer + ", guarantee = " + self.guarantee + ", color = " + self.color + ", season = "\
-              + self.season + ", fishingSetType = "  + self.fishingSetType + ", width = " + self.width + ", length = " + self.legth + \
-               ", form = " + self.form + "\n"
-
-    def __del__(self):
-        print("Delete")
+        return str(self.price) + " " + str(self.name) + " " + str(self.masa) + " " + str(self.material) + \
+           " " + str(self.guarantee) + " " + str(self.color) + str(self.producer) + " " + str(self.season.value) \
+           + " " + str(self.fishingSetType.value) + " " + str(self.width) + " " + str(self.legth) + " " + str(self.form)

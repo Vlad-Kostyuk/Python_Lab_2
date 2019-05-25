@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import Enum, auto
 
 
 class FishingSetType(Enum):
-    FISHINGRODS = "FISHINGRODS"
-    FISHINGNET = "FISHINGNET"
-    CLOTHING = "CLOTHING"
-    BAIT = "BAIT"
+    FISHINGRODS = auto()
+    FISHINGNET = auto()
+    CLOTHING = auto()
+    BAIT = auto()
